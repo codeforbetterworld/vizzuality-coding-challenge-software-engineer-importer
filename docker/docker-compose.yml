@@ -1,0 +1,59 @@
+version: '3'
+
+services:
+    mongodb:
+        container_name: 'vizzuality-mongodb'
+        image: mongo:4.0
+        ports:
+            - "${MONGO_PORT}:${MONGO_PORT}"
+        env_file:
+            - ../.env
+        volumes:
+            - ".${MONGO_DATA_DIR}:${MONGO_DATA_DIR}"
+        expose:
+            - "${MONGO_PORT}"
+        command: "mongod --smallfiles --logpath=${MONGO_LOG_FILE}"
+        networks:
+            - vizzuality-network
+
+    api-post:
+        container_name: 'vizzuality-python-api-post'
+        ports:
+            - "${FLASK_PORT}:${FLASK_PORT}"
+        expose:
+            - "${FLASK_PORT}"
+        env_file:
+            - ../.env
+        volumes:
+            - ../vizzuality-api-post:/opt/
+        build:
+            context: ./DockerfilePython
+        command: "${FLASK_RUN_COMMAND}"
+        links:
+            - mongodb
+        depends_on:
+            - mongodb
+        networks:
+            - vizzuality-network
+
+    api-get:
+        container_name: 'vizzuality-nodejs-get'
+        build:
+            context: ./DockerfileNode
+        env_file:
+            - ../.env
+        volumes:
+            - "../vizzuality-api-get:/home/nodejs/app"
+        ports:
+            - "${NODE_MAPPED_PORT}:80"
+        depends_on:
+            - mongodb
+        command: "${NODE_RUN_COMMAND}"
+        expose:
+            - "${NODE_MAPPED_PORT}"
+        networks:
+            - vizzuality-network
+
+networks:
+    vizzuality-network:
+        driver: bridge

@@ -1,0 +1,10 @@
+docker-compose*
+Dockerfile
+.gitignore
+__pycache__
+README.md
+.git
+.env
+data
+DockerfileNode
+DockerfilePython

@@ -1,0 +1,5 @@
+.env
+docker/data/db
+vizzuality-api-get/node_modules
+__pycache__/
+

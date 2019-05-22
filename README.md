@@ -140,7 +140,8 @@ In a first approach for write the data in mongodb through pymongo I used insert_
 
 ### Fetch data: Firefox VS Chrome
 
-Fetching data I am getting this disparate results in Debian stretch 64-bit PC:
+Fetching data I am getting this disparate results in Debian stretch 64-bit PC
+
 | URL | Browser | Version | Time |
 | --- | --- | --- | --- |
 | `/api/emissions/all` | Firefox Developer | 68.0b3 (64-bit) | 23.02s

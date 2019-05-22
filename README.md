@@ -16,6 +16,12 @@ The solution has been built with the following software:
 
 ```docker-compose version 1.21.2```
 
+## Configuration steps
+* Rename .env.dist file to .env and set the propper password for mongodb user:
+```bash
+MONGO_APP_USER_PASSWORD=PUT_HERE_THE_PASSWORD
+```
+
 ## Docker commands
 
 ### Start containers

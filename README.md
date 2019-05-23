@@ -118,7 +118,7 @@ For retrieve information against emissions dataset we have available the followi
 | `http://localhost:8021/api/emissions/all` | List all records |
 | `http://localhost:8021/api/emissions/country/:country` | Filter records by country |
 | `http://localhost:8021/api/emissions/sector/:sector` | Filter records by sector |
-| `http://localhost:8021/emissions/parentsector/:parentsector` | Filter records by Parent sector |
+| `http://localhost:8021/api/emissions/parentsector/:parentsector` | Filter records by Parent sector |
 
 ### TODO List
 

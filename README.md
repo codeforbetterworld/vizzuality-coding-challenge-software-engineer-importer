@@ -19,6 +19,7 @@ The solution has been built with the following software:
 ## Configuration steps
 * Rename .env.dist file to .env and set the propper password for mongodb user:
 ```bash
+MONGO_INITDB_ROOT_PASSWORD=PUT_HERE_THE_PASSWORD
 MONGO_APP_USER_PASSWORD=PUT_HERE_THE_PASSWORD
 ```
 

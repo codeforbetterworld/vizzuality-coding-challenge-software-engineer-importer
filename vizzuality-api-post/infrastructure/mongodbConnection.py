@@ -42,5 +42,3 @@ def createClient():
                                 + MONGO_PORT
                                 + '/admin')
     return mongoClient
-
-initialize()

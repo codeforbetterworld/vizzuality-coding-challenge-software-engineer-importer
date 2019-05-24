@@ -1,10 +1,6 @@
-import unittest, sys, os
+import unittest, sys
 sys.path.append("..")
 from dataFormatter import csvDataFormatter
-
-eget = os.environ.get
-
-CSV_SEPARATOR=eget('CSV_SEPARATOR')
 
 class csvDataFormatterTest(unittest.TestCase):
 

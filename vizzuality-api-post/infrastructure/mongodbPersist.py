@@ -7,7 +7,6 @@ eget = os.environ.get
 MONGO_APP_DATABASE_NAME=eget('MONGO_APP_DATABASE_NAME')
 
 def save(data):
-    mongodbConnection.initialize()
     mongoClient = mongodbConnection.createClient()
     database = mongoClient[MONGO_APP_DATABASE_NAME]
     try:

@@ -92,7 +92,7 @@ curl -s "http://localhost:5000/emissions" \
 
 ### Tests execution
 ```bash
-docker exec -ti vizzuality-python-api-post sh -c "cd /opt/ && python -m unittest tests/getCsvDataTest.py"
+docker exec -ti vizzuality-python-api-post sh -c "cd /opt && python -m unittest discover -s tests -p '*Test.py'"
 ```
 
 ### TODO List

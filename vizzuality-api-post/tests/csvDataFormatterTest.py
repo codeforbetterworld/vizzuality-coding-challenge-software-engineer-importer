@@ -4,9 +4,9 @@ from dataFormatter import csvDataFormatter
 
 class csvDataFormatterTest(unittest.TestCase):
 
-    def test_splitLine(self):
+    def test_splitLineCommaSeparated(self):
         fakeLine = 'Eduard Punset,Anthony Hopkins'
-        result = csvDataFormatter.splitLine(fakeLine)
+        result = csvDataFormatter.splitLineCommaSeparated(fakeLine)
         self.assertEqual(result, ['Eduard Punset', 'Anthony Hopkins'])
 
 if __name__ == '__main__':

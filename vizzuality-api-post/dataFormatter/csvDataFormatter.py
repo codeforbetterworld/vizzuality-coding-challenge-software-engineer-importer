@@ -9,7 +9,7 @@ CSV_SEPARATOR=eget('CSV_SEPARATOR')
 def formatLine(line):
     formattedLine = setEncoding(line)
     formattedLine = removeNewLineCharacters(formattedLine)
-    formattedLine = splitLine(formattedLine)
+    formattedLine = splitLineCommaSeparated(formattedLine)
     return formattedLine
 
 def setEncoding(line):
@@ -18,5 +18,5 @@ def setEncoding(line):
 def removeNewLineCharacters(line):
     return line.replace(str(CSV_NEWLINE_CHARACTERS), '')
 
-def splitLine(line):
-    return line.split(str(CSV_SEPARATOR))
+def splitLineCommaSeparated(line):
+    return line.split(',')

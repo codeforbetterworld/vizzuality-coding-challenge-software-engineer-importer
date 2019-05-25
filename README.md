@@ -100,10 +100,7 @@ docker exec -ti vizzuality-python-api-post sh -c "cd /opt && python -m unittest 
 
 In order to improve the solution with more time is interesting cover this implementations:
 
-- [ ] Check if file is CSV
-- [ ] Check CSV file integrity
-- [ ] Skip duplicates when writing to database
-- [ ] Write more important missing unit tests methods
+- [ ] Write more important missing unit test methods
 - [ ] Improve database write with multithreading
 
 ## GET Method Solution

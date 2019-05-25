@@ -1,22 +1,14 @@
-import os
-
-eget = os.environ.get
-
-CHARACTER_ENCODING=eget('CHARACTER_ENCODING')
-CSV_NEWLINE_CHARACTERS=eget('CSV_NEWLINE_CHARACTERS')
-CSV_SEPARATOR=eget('CSV_SEPARATOR')
-
 def formatLine(line):
-    formattedLine = setEncoding(line)
-    formattedLine = removeNewLineCharacters(formattedLine)
+    formattedLine = setEncodingUtf8(line)
+    formattedLine = removeNewLineCharactersRN(formattedLine)
     formattedLine = splitLineCommaSeparated(formattedLine)
     return formattedLine
 
-def setEncoding(line):
-    return line.decode(str(CHARACTER_ENCODING))
+def setEncodingUtf8(line):
+    return line.decode('utf-8')
 
-def removeNewLineCharacters(line):
-    return line.replace(str(CSV_NEWLINE_CHARACTERS), '')
+def removeNewLineCharactersRN(line):
+    return line.replace('\r\n', '')
 
 def splitLineCommaSeparated(line):
     return line.split(',')

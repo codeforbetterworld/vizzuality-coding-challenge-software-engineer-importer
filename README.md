@@ -156,12 +156,25 @@ Fetching data I am getting this disparate results in Debian stretch 64-bit PC
 | `/api/emissions/all` | Chrome | 74.0.3729.157   |2.15s
 
 ### Express mongodb output filtering not working
+
 When I am trying to create a filter output like:
+
 ```bash
 find({},{"1950":true})
 ```
+
 in correspondence with mongo client statement:
+
 ```bash
 db.getCollection('emissions').find({},{"1950":true})
 ```
+
 The result is incorrect
+
+### Premature abstraction
+
+Write tests helps me to pay more attention when I am implementing a solution, it helps me empathize better with all the elements who participate in the game: performance, complexity, quality, the test case, things that interact with, etc.
+
+I am starting to introduce some tests, after code, and they come to me reflections or new approaches that TDD gives me, this is one important reason why practice "test first" as a primary convention in most cases.
+
+Particularly test incosistency clears me about accidental complexity introduced in csvDataFormatter. I was using env vars in order to make more flexible the possibility of change, for example change easy via env file comma separated by tab separated as a symbol used to separate values and columns. Well, this is a possibility not a fact, I cannot know if in a future the requirements will change and introduce this new scenario, it is also a challenge, at first, without iterations. So, if I want keep simplicity I have to relate the code with the real needs instead of overtaking a non-existent possibility.

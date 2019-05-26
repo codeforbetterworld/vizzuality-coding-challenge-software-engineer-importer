@@ -27,11 +27,11 @@ MONGO_APP_USER_PASSWORD=PUT_HERE_THE_PASSWORD
 
 ### Start containers
 
-```docker-compose -f docker/docker-compose up```
+```docker-compose -f docker/docker-compose.yml up```
 
 ### Stop containers
 
-```docker-compose -f docker/docker-compose stop```
+```docker-compose -f docker/docker-compose.yml stop```
 
 ## Application folder structure
 

@@ -149,8 +149,8 @@ Fetching data I am getting this disparate results in Debian stretch 64-bit PC
 
 | URL | Browser | Version | Time |
 | --- | --- | --- | --- |
-| `http://localhost:8021/api/emissions/all` | Firefox Developer | 68.0b3 (64-bit) | 23.02s
-| `http://localhost:8021/api/emissions/all` | Chrome | 74.0.3729.157   |2.15s
+| `http://localhost:8021/api/emissions/all` | Firefox Developer | 68.0b3 (64-bit) | 2.15s
+| `http://localhost:8021/api/emissions/all` | Chrome | 74.0.3729.157   | 23.02s
 
 ### Express mongodb output filtering not working
 
